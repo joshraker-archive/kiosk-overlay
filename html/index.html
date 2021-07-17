@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script>
+    const urlParams = Object.fromEntries(new URLSearchParams(location.search));
+    const homePage = urlParams.homePage;
+
+    onload = () => {
+      const iframe = document.getElementById('iframe');
+      const homeButton = document.getElementById('return_to_home');
+
+      const returnToHome = () => {
+        iframe.src = homePage;
+      }
+
+      homeButton.onclick = returnToHome;
+      returnToHome();
+    }
+  </script>
+</head>
+
+<body>
+<button id="return_to_home">Return to Home</button>
+<iframe id="iframe" />
+</body>
+
+</html>
