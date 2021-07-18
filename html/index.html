@@ -2,28 +2,17 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-  <script>
-    const urlParams = Object.fromEntries(new URLSearchParams(location.search));
-    const homePage = urlParams.homePage;
-
-    onload = () => {
-      const iframe = document.getElementById('iframe');
-      const homeButton = document.getElementById('return_to_home');
-
-      const returnToHome = () => {
-        iframe.src = homePage;
-      }
-
-      homeButton.onclick = returnToHome;
-      returnToHome();
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-<button id="return_to_home">Return to Home</button>
-<iframe id="iframe" />
+<button id="home_button" class="btn btn-large btn-raised waves-effect waves-light"><i class="material-icons left">home</i>Home</button>
+<iframe id="iframe"></iframe>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>

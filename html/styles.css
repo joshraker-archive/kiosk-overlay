@@ -5,8 +5,15 @@
   height: 100%;
 }
 
-#return_to_home {
+#home_button {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 1.2em;
+  background-color: #002e5d;
+  padding: 0 16px;
+}
+
+i.left {
+  margin-right: 12px;
 }
